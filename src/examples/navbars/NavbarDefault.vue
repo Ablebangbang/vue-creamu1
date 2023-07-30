@@ -15,9 +15,9 @@ const props = defineProps({
     color: String,
     label: String,
     default: () => ({
-      route: "https://www.creative-tim.com/product/vue-material-kit",
+      route: "http://localhost:3000/",
       color: "bg-gradient-success",
-      label: "Free Download"
+      label: "BUY NOW",
     })
   },
   transparent: {
@@ -57,11 +57,11 @@ function getArrowColor() {
 const getTextColor = () => {
   let color;
   if (props.transparent && textDark.value) {
-    color = "text-dark";
+    color = "text-info";
   } else if (props.transparent) {
-    color = "text-white";
+    color = "text-info";
   } else {
-    color = "text-dark";
+    color = "text-info";
   }
 
   return color;
@@ -117,10 +117,10 @@ watch(
         ]"
         :to="{ name: 'presentation' }"
         rel="tooltip"
-        title="Designed and Coded by Creative Tim"
+        title="CreamU"
         data-placement="bottom"
       >
-        Material Kit 2
+        CreamU
       </RouterLink>
       <RouterLink
         class="navbar-brand d-block d-md-none"
@@ -131,14 +131,15 @@ watch(
         "
         to="/"
         rel="tooltip"
-        title="Designed and Coded by Creative Tim"
+        title="CreamU"
         data-placement="bottom"
       >
-        Material Design
+        CreamU
       </RouterLink>
       <a
-        href="https://www.creative-tim.com/product/vue-material-kit-pro"
-        class="btn btn-sm bg-gradient-success mb-0 ms-auto d-lg-none d-block"
+        href="#"
+        style="color:#e5d2ab; background-color: #768a3a;"
+        class="btn btn-sm  mb-0 ms-auto d-lg-none d-block" 
         >Buy Now</a
       >
       <button
@@ -175,7 +176,7 @@ watch(
                 :class="getTextColor()"
                 >dashboard</i
               >
-              Pages
+              商品
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -198,36 +199,36 @@ watch(
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1"
                       >
-                        Landing Pages
+                        動物公仔系列
                       </div>
                       <RouterLink
                         :to="{ name: 'about' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>About Us</span>
+                        <span>有角系列</span>
                       </RouterLink>
                       <RouterLink
                         :to="{ name: 'contactus' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Contact Us</span>
+                        <span>無角系列</span>
                       </RouterLink>
                       <RouterLink
                         :to="{ name: 'author' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Author</span>
+                        <span>居家動物系列</span>
                       </RouterLink>
                       <div
                         class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                       >
-                        Account
+                        客製化木偶
                       </div>
                       <RouterLink
                         :to="{ name: 'signin-basic' }"
                         class="dropdown-item border-radius-md"
                       >
-                        <span>Sign In</span>
+                        <span>馬上DIY</span>
                       </RouterLink>
                     </div>
                   </div>
@@ -237,36 +238,36 @@ watch(
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0"
                 >
-                  Landing Pages
+                動物公仔系列
                 </div>
                 <RouterLink
                   :to="{ name: 'about' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>About Us</span>
+                  <span>有角系列</span>
                 </RouterLink>
                 <RouterLink
                   :to="{ name: 'contactus' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Contact Us</span>
+                  <span>無角系列</span>
                 </RouterLink>
                 <RouterLink
                   :to="{ name: 'author' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Author</span>
+                  <span>居家系列</span>
                 </RouterLink>
                 <div
                   class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-0 mt-3"
                 >
-                  Account
+                  客製化木偶
                 </div>
                 <RouterLink
                   :to="{ name: 'signin-basic' }"
                   class="dropdown-item border-radius-md"
                 >
-                  <span>Sign In</span>
+                  <span>開始DIY</span>
                 </RouterLink>
               </div>
             </div>
@@ -285,7 +286,7 @@ watch(
                 :class="getTextColor()"
                 >view_day</i
               >
-              Sections
+              資訊專區
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -318,9 +319,9 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Page Sections
+                              最新消息
                             </h6>
-                            <span class="text-sm">See all sections</span>
+                            <span class="text-sm">Latest News</span>
                           </div>
                           <img
                             :src="downArrow"
@@ -335,13 +336,13 @@ watch(
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'page-headers' }"
                       >
-                        Page Headers
+                        最新資訊
                       </RouterLink>
                       <RouterLink
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'page-features' }"
                       >
-                        Features
+                        關於我們
                       </RouterLink>
                     </div>
                   </li>
@@ -360,9 +361,9 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Navigation
+                              注意事項
                             </h6>
-                            <span class="text-sm">See all navigations</span>
+                            <span class="text-sm">Precautions</span>
                           </div>
                           <img
                             :src="downArrow"
@@ -377,20 +378,20 @@ watch(
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'navigation-navbars' }"
                       >
-                        Navbars
+                        智慧財產宣告
                       </RouterLink>
                       <RouterLink
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'navigation-navtabs' }"
                       >
-                        Nav Tabs
+                        常見問題
                       </RouterLink>
-                      <RouterLink
+                      <!-- <RouterLink
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'navigation-pagination' }"
                       >
                         Pagination
-                      </RouterLink>
+                      </RouterLink> -->
                     </div>
                   </li>
                   <li
@@ -408,9 +409,9 @@ watch(
                             <h6
                               class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                             >
-                              Input Areas
+                              流程解說
                             </h6>
-                            <span class="text-sm">See all input areas</span>
+                            <span class="text-sm">Process explanation</span>
                           </div>
                           <img
                             :src="downArrow"
@@ -425,17 +426,17 @@ watch(
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'inputareas-inputs' }"
                       >
-                        Inputs
+                        購買流程介紹
                       </RouterLink>
                       <RouterLink
                         class="dropdown-item ps-3 border-radius-md mb-1"
                         :to="{ name: 'inputareas-forms' }"
                       >
-                        Forms
+                        客製化流程介紹
                       </RouterLink>
                     </div>
                   </li>
-                  <li
+                  <!-- <li
                     class="nav-item dropdown dropdown-hover dropdown-subitem list-group-item border-0 p-0"
                   >
                     <a
@@ -566,7 +567,7 @@ watch(
                         Typography
                       </RouterLink>
                     </div>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
               <div class="row d-lg-none">
@@ -579,7 +580,7 @@ watch(
                         <h6
                           class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                         >
-                          Page Sections
+                          最新資訊
                         </h6>
                       </div>
                     </div>
@@ -588,13 +589,13 @@ watch(
                     class="dropdown-item ps-3 border-radius-md mb-1"
                     :to="{ name: 'page-headers' }"
                   >
-                    Page Headers
+                    最新消息
                   </RouterLink>
                   <RouterLink
                     class="dropdown-item ps-3 border-radius-md mb-1"
                     :to="{ name: 'page-features' }"
                   >
-                    Features
+                    關於我們
                   </RouterLink>
                   <div class="d-flex mb-2 mt-3">
                     <div
@@ -604,7 +605,7 @@ watch(
                         <h6
                           class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                         >
-                          Navigation
+                          注意事項
                         </h6>
                       </div>
                     </div>
@@ -613,21 +614,21 @@ watch(
                     class="dropdown-item ps-3 border-radius-md mb-1"
                     :to="{ name: 'navigation-navbars' }"
                   >
-                    Navbars
+                    智慧財產宣告
                   </RouterLink>
                   <RouterLink
                     class="dropdown-item ps-3 border-radius-md mb-1"
                     :to="{ name: 'navigation-navtabs' }"
                   >
-                    Nav Tabs
+                    常見問題
                   </RouterLink>
-                  <RouterLink
+                  <!-- <RouterLink
                     class="dropdown-item ps-3 border-radius-md mb-1"
                     :to="{ name: 'navigation-pagination' }"
                   >
                     Pagination
-                  </RouterLink>
-                  <div class="d-flex mb-2 mt-3">
+                  </RouterLink> -->
+                  <!-- <div class="d-flex mb-2 mt-3">
                     <div
                       class="w-100 d-flex align-items-center justify-content-between"
                     >
@@ -749,7 +750,7 @@ watch(
                     :to="{ name: 'el-typography' }"
                   >
                     Typography
-                  </RouterLink>
+                  </RouterLink> -->
                 </div>
               </div>
             </div>
@@ -768,7 +769,7 @@ watch(
                 :class="getTextColor()"
                 >article</i
               >
-              Docs
+              會員專區
               <img
                 :src="getArrowColor()"
                 alt="down-arrow"
@@ -794,11 +795,10 @@ watch(
                       <h6
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                       >
-                        Getting Started
+                        登入/註冊
                       </h6>
                       <span class="text-sm"
-                        >All about overview, quick start, license and
-                        contents</span
+                        >Login/Register</span
                       >
                     </a>
                   </li>
@@ -810,14 +810,14 @@ watch(
                       <h6
                         class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                       >
-                        Foundation
+                        購物車
                       </h6>
                       <span class="text-sm"
-                        >See our colors, icons and typography</span
+                        >Shopping Cart</span
                       >
                     </a>
                   </li>
-                  <li class="nav-item list-group-item border-0 p-0">
+                  <!-- <li class="nav-item list-group-item border-0 p-0">
                     <a
                       class="dropdown-item py-2 ps-3 border-radius-md"
                       href=" https://www.creative-tim.com/learning-lab/vue/alerts/material-kit/"
@@ -832,7 +832,7 @@ watch(
                         components</span
                       >
                     </a>
-                  </li>
+                  </li> -->
                 </ul>
               </div>
               <div class="row d-lg-none">
@@ -844,11 +844,10 @@ watch(
                     <h6
                       class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                     >
-                      Getting Started
+                      登入/註冊
                     </h6>
                     <span class="text-sm"
-                      >All about overview, quick start, license and
-                      contents</span
+                      >Login/Register</span
                     >
                   </a>
                   <a
@@ -858,13 +857,13 @@ watch(
                     <h6
                       class="dropdown-header text-dark font-weight-bolder d-flex justify-content-cente align-items-center p-0"
                     >
-                      Foundation
+                      購物車
                     </h6>
                     <span class="text-sm"
-                      >See our colors, icons and typography</span
+                      >Shopping Cart</span
                     >
                   </a>
-                  <a
+                  <!-- <a
                     class="dropdown-item py-2 ps-3 border-radius-md"
                     href="./pages/about-us.html"
                   >
@@ -903,30 +902,28 @@ watch(
                       >For those who want flexibility, use our utility
                       classes</span
                     >
-                  </a>
+                  </a> -->
                 </div>
               </div>
             </div>
           </li>
           <li class="nav-item dropdown dropdown-hover mx-2">
             <a
-              href="https://www.github.com/creativetimofficial/vue-material-kit"
+              href="http://localhost:3000/"
               class="nav-link d-flex cursor-pointer align-items-center"
             >
               <svg
-                width="20px"
-                height="20px"
+                width="30px"
+                height="30px"
                 class="material-icons me-2 opacity-6"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
-                data-testid="GitHubIcon"
-                :fill="props.transparent && '#fff'"
+                data-testid="FacebookIcon"
+                fill="blue"
               >
-                <path
-                  d="M12 1.27a11 11 0 00-3.48 21.46c.55.09.73-.28.73-.55v-1.84c-3.03.64-3.67-1.46-3.67-1.46-.55-1.29-1.28-1.65-1.28-1.65-.92-.65.1-.65.1-.65 1.1 0 1.73 1.1 1.73 1.1.92 1.65 2.57 1.2 3.21.92a2 2 0 01.64-1.47c-2.47-.27-5.04-1.19-5.04-5.5 0-1.1.46-2.1 1.2-2.84a3.76 3.76 0 010-2.93s.91-.28 3.11 1.1c1.8-.49 3.7-.49 5.5 0 2.1-1.38 3.02-1.1 3.02-1.1a3.76 3.76 0 010 2.93c.83.74 1.2 1.74 1.2 2.94 0 4.21-2.57 5.13-5.04 5.4.45.37.82.92.82 2.02v3.03c0 .27.1.64.73.55A11 11 0 0012 1.27"
-                ></path>
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
               </svg>
-              Github
+              Facebook
             </a>
           </li>
         </ul>
